@@ -6,10 +6,10 @@ interface Carro {
     motor?: string; // Propriedade opcional
 }
 const meuCarro: Carro = {
-    marca: "Toyota",
-    modelo: "Corolla",
-    ano: 2022,
-    motor: "2.0 Flex"
+    marca: "Lexus",
+    modelo: "Ls",
+    ano: 2025,
+    motor: "V10"
 };
 console.log("Meu Carro:", meuCarro);
 
@@ -19,8 +19,8 @@ interface Multiplicacao {
     (a: number, b: number): number;
 }
 const multiplicar: Multiplicacao = (x, y) => x * y;
-console.log("Multiplicação 3 x 4:", multiplicar(3, 4)); // 12
-console.log("Multiplicação 7 x 2:", multiplicar(7, 2)); // 14
+console.log("Multiplicação 5 x 5:", multiplicar(5, 5)); 
+console.log("Multiplicação 9 x 9:", multiplicar(9, 9)); 
 
 
 // Exercício 3 - Função Genérica
@@ -29,8 +29,8 @@ function inverterArray<T>(array: T[]): T[] {
 }
 const numeros = [1, 2, 3, 4, 5];
 const palavras = ["TypeScript", "é", "incrível"];
-console.log("Array invertido (números):", inverterArray(numeros)); // [5, 4, 3, 2, 1]
-console.log("Array invertido (palavras):", inverterArray(palavras)); // ["incrível", "é", "TypeScript"]
+console.log("Array invertido (números):", inverterArray(numeros)); 
+console.log("Array invertido (palavras):", inverterArray(palavras)); 
 
 
 // Exercício 4 - Interface Genérica
@@ -49,8 +49,8 @@ class UsuarioRepositorio implements Repositorio<{ nome: string; email: string }>
 }
 // Teste da implementação
 const repo = new UsuarioRepositorio();
-repo.salvar({ nome: "João", email: "joao@email.com" });
-repo.salvar({ nome: "Maria", email: "maria@email.com" });
+repo.salvar({ nome: "Henri", email: "henri@email.com" });
+repo.salvar({ nome: "ALice", email: "alice@email.com" });
 console.log("Lista de usuários:", repo.obterTodos());
 
 
@@ -79,9 +79,9 @@ type Trabalhador = {
 };
 type EstudanteTrabalhador = Estudante & Trabalhador;
 const estudanteTrabalhador: EstudanteTrabalhador = {
-    nome: "Carlos",
+    nome: "Henri",
     curso: "Engenharia de Software",
-    empresa: "Tech Corp",
-    cargo: "Desenvolvedor Júnior"
+    empresa: "Google",
+    cargo: "CEO"
 };
 console.log("Estudante Trabalhador:", estudanteTrabalhador);
